@@ -16,7 +16,7 @@ export class CadastrarMarcaComponent implements OnInit {
   });
 
   @ViewChild(FormGroupDirective) formGroupDirective: FormGroupDirective;
-  
+
   constructor(private formBuilder: FormBuilder, private marcasService: MarcasService) { }
 
   ngOnInit(): void {
@@ -24,7 +24,7 @@ export class CadastrarMarcaComponent implements OnInit {
 
   async submit(){
 
-    if(this.formulario.invalid){
+    if(!this.formulario.valid){
       return;
     }
     this.formulario.disable;
