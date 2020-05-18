@@ -9,12 +9,14 @@ import { Marca } from '../models/marca.model';
   styleUrls: ['./cadastrar-marca.component.scss']
 })
 export class CadastrarMarcaComponent implements OnInit {
-  @ViewChild(FormGroupDirective) formGroupDirective: FormGroupDirective;
+
 
   formulario = this.formBuilder.group({
     nome: ['', Validators.required]
   });
 
+  @ViewChild(FormGroupDirective) formGroupDirective: FormGroupDirective;
+  
   constructor(private formBuilder: FormBuilder, private marcasService: MarcasService) { }
 
   ngOnInit(): void {
