@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
       ...(await documentoProduto).data()
     } as Produto;
 
-    const documentoModelo = this.firestore.collection('modelo').doc(produto.modelo).get()
+    const documentoModelo = this.firestore.collection('modelo').doc(produto.idModelo).get()
     .toPromise();
 
     const modelo = {
