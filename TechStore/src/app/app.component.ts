@@ -17,23 +17,5 @@ export class AppComponent implements OnInit {
   }
 
   async ngOnInit() {
-    const documentoProduto = this.firestore.collection('testes').doc('ms58CHmK5wO9iBoxsYKw').get()
-    .toPromise();
-
-    const produto = {
-      id: (await documentoProduto).id,
-      ...(await documentoProduto).data()
-    } as Produto;
-
-    const documentoModelo = this.firestore.collection('modelo').doc(produto.idModelo).get()
-    .toPromise();
-
-    const modelo = {
-      id: (await documentoModelo).id,
-      ...(await documentoModelo).data()
-    } as Modelo;
-
-    console.log('Nome Produto: '+ produto.nome);
-    console.log('Memoria do Produto: '+modelo.memoria);
   }
 }

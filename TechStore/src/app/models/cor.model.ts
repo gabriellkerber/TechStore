@@ -1,4 +1,4 @@
-export class Modelo{
+export class Cor{
     id: string;
     nome: string;
 }

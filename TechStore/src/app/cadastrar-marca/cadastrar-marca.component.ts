@@ -27,7 +27,8 @@ export class CadastrarMarcaComponent implements OnInit {
     if(!this.formulario.valid){
       return;
     }
-    this.formulario.disable;
+    this.formulario.disable();
+
     const marca = this.formulario.value as Marca;
 
     const marcaRetorno = await this.marcasService.add(marca);

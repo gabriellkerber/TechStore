@@ -19,14 +19,18 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input'
 import { MatCardModule } from '@angular/material/card'
-import { MatIconModule } from '@angular/material/icon'
+import { MatIconModule } from '@angular/material/icon';
+import { CadastroProdutoComponent } from './cadastro-produto/cadastro-produto.component'
+import { MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatSelectModule} from '@angular/material/select'; 
 
 
 @NgModule({
   declarations: [
     AppComponent,
     EditarMarcaComponent,
-    CadastrarMarcaComponent
+    CadastrarMarcaComponent,
+    CadastroProdutoComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +44,9 @@ import { MatIconModule } from '@angular/material/icon'
     MatButtonModule,
     MatInputModule,
     MatCardModule,
-    MatIconModule
+    MatIconModule,
+    MatProgressSpinnerModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
